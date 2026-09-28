@@ -1,0 +1,63 @@
+[config]
+
+[templates.btop]
+input_path = './templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.cava]
+input_path = './templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/your-theme'
+post_hook = 'pkill -USR1 cava || true'
+
+[templates.discord]
+input_path = './templates/midnight-discord.css'
+output_path = '~/.config/vesktop/themes/midnight.theme.css'
+
+[templates.gtk3]
+input_path = './templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface color-scheme prefer-dark && systemctl --user restart xdg-desktop-portal-gtk xdg-desktop-portal'
+
+[templates.gtk4]
+input_path = './templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
+
+[templates.hyprland]
+input_path = './templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload & pkill hyprlauncher & systemctl --user restart hyprpolkitagent'
+
+[templates.hyprland-lua]
+input_path = './templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/colors.lua'
+
+[templates.kitty]
+input_path = './templates/kitty-colors.conf'
+output_path = '~/.config/kitty/themes/Matugen.conf'
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
+
+[templates.obs]
+input_path = './templates/matugen.obt'
+output_path = '~/.config/obs-studio/themes/matugen.obt'
+
+[templates.qt6ct]
+input_path = './templates/qtct-colors.conf'
+output_path = '~/.config/qt6ct/colors/matugen.conf'
+
+[templates.quickshell]
+input_path = './templates/quickshell.json'
+output_path = '~/.local/state/quickshell/generated/colors.json'
+
+[templates.vscode-json]
+input_path = './templates/vscode-colors.json'
+output_path = '~/.cache/matugen/vscode-colors.json'
+
+[templates.vscode-raw]
+input_path = './templates/vscode-colors'
+output_path = '~/.cache/matugen/vscode-colors'
+
+[templates.yazi]
+input_path = './templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
